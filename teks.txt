@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EthOS Block Catcher</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #0d1117;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    #game {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      background-color: #1c1c1c;
+    }
+
+    #player {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 60px;
+      background: #3cb371;
+      border-radius: 10px;
+      text-align: center;
+      line-height: 60px;
+      font-weight: bold;
+    }
+
+    .block, .bug {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+    }
+
+    .block {
+      background-color: #00acee;
+    }
+
+    .bug {
+      background-color: #ff4d4f;
+    }
+
+    #score {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 20px;
+    }
+
+    #gameOver {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 32px;
+      color: #ff4d4f;
+    }
+  </style>
+</head>
+<body>
+  <div id="game">
+    <div id="player">🧑‍💻</div>
+    <div id="score">Score: 0</div>
+    <div id="gameOver">Game Over<br><button onclick="restartGame()">Restart</button></div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
